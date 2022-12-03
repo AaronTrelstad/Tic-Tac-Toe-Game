@@ -45,42 +45,42 @@ if mode == 1:
                         break
 
             if count >= 5:
-                if board['7'] == board['8'] == board['9'] != ' ': # across the top
+                if board['7'] == board['8'] == board['9'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(board['7'] + " wins")
                     break
-                elif board['4'] == board['5'] == board['6'] != ' ': # across the middle
+                elif board['4'] == board['5'] == board['6'] != ' ':
                     board(board)
                     print("\nGame Over")
                     print(board['4'] + " wins")
                     break
-                elif board['1'] == board['2'] == board['3'] != ' ': # across the bottom
+                elif board['1'] == board['2'] == board['3'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(board['1'] + " wins")
                     break
-                elif board['1'] == board['4'] == board['7'] != ' ': # down the left side
+                elif board['1'] == board['4'] == board['7'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(board['1'] + " wins")
                     break
-                elif board['2'] == board['5'] == board['8'] != ' ': # down the middle
+                elif board['2'] == board['5'] == board['8'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(board['2'] + " wins")
                     break
-                elif board['3'] == board['6'] == board['9'] != ' ': # down the right side
+                elif board['3'] == board['6'] == board['9'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(board['3'] + " wins")
                     break
-                elif board['7'] == board['5'] == board['3'] != ' ': # diagonal
+                elif board['7'] == board['5'] == board['3'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(board['7'] + " wins")
                     break
-                elif board['1'] == board['5'] == board['9'] != ' ': # diagonal
+                elif board['1'] == board['5'] == board['9'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(board['1'] + " wins")
@@ -91,7 +91,7 @@ if mode == 1:
                 print("It's a Tie")
 
         restart = input("Do want to play Again?(y/n)")
-        if restart == "y" or restart == "Y":
+        if restart.lower() == "y":
             for key in board_keys:
                 board[key] = " "
 
@@ -137,42 +137,42 @@ if mode == 2:
                 continue
 
             if count >= 5:
-                if board['7'] == board['8'] == board['9'] != ' ': # across the top
+                if board['7'] == board['8'] == board['9'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(turn + " won")
                     break
-                elif board['4'] == board['5'] == board['6'] != ' ': # across the middle
+                elif board['4'] == board['5'] == board['6'] != ' ':
                     board(board)
                     print("\nGame Over")
                     print(turn + " won")
                     break
-                elif board['1'] == board['2'] == board['3'] != ' ': # across the bottom
+                elif board['1'] == board['2'] == board['3'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(turn + " won")
                     break
-                elif board['1'] == board['4'] == board['7'] != ' ': # down the left side
+                elif board['1'] == board['4'] == board['7'] != ' ': 
                     printboard(board)
                     print("\nGame Over.\n")
                     print(turn + " won")
                     break
-                elif board['2'] == board['5'] == board['8'] != ' ': # down the middle
+                elif board['2'] == board['5'] == board['8'] != ' ': 
                     printboard(board)
                     print("\nGame Over")
                     print(turn + " won")
                     break
-                elif board['3'] == board['6'] == board['9'] != ' ': # down the right side
+                elif board['3'] == board['6'] == board['9'] != ' ': 
                     printboard(board)
                     print("\nGame Over")
                     print(turn + " won")
                     break
-                elif board['7'] == board['5'] == board['3'] != ' ': # diagonal
+                elif board['7'] == board['5'] == board['3'] != ' ':
                     printboard(board)
                     print("\nGame Over")
                     print(turn + " won")
                     break
-                elif board['1'] == board['5'] == board['9'] != ' ': # diagonal
+                elif board['1'] == board['5'] == board['9'] != ' ': 
                     printboard(board)
                     print("\nGame Over")
                     print(turn + " won")
@@ -188,7 +188,7 @@ if mode == 2:
                 turn = 'X'
 
         restart = input("Do want to play Again?(y/n)")
-        if restart == "y" or restart == "Y":
+        if restart.lower() == "y":
             for key in board_keys:
                 board[key] = " "
 
